@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.login-form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.login-form-wrapper .bar {
+  position: absolute;
+  width: 3rem;
+  height: 20rem;
+  background-color: #3AA0FF;
+  animation: bar-grow 1s cubic-bezier(0.42, 0.97, 0.52, 1.49);
+}
+.login-form-wrapper .bar.bar-top-left {
+  left: 0;
+  top: 0;
+  transform-origin: top;
+}
+.login-form-wrapper .bar.bar-bottom-right {
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom;
+}
+@keyframes bar-grow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.login-form-wrapper .left-form {
+  padding: 3.125rem 10rem;
+}
+.login-form-wrapper .left-form .logo {
+  text-align: center;
+  margin-bottom: 7.5rem;
+}
+.login-form-wrapper .left-form .logo img {
+  max-width: 12.5rem;
+  height: auto;
+  text-align: center;
+}
+.login-form-wrapper .left-form .greeting-message {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+.login-form-wrapper .left-form form .form-label, .login-form-wrapper .left-form form .form-check-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+}
+.login-form-wrapper .left-form form input.form-control {
+  border: 1px solid #EFF0F3;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.login-form-wrapper .left-form form input.form-control::placeholder {
+  color: #676E89;
+  opacity: 0.6;
+}
+.login-form-wrapper .left-form form .submit-btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #3AA0FF;
+  border: none;
+  padding: 1rem 0;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+.login-form-wrapper .left-form .help-and-support .support-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #676E89;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.login-form-wrapper .left-form .help-and-support > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.login-form-wrapper .left-form .help-and-support > div .support-number, .login-form-wrapper .left-form .help-and-support > div .support-email {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.login-form-wrapper .left-form .help-and-support > div .support-number .icon, .login-form-wrapper .left-form .help-and-support > div .support-email .icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #F2FAFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form-wrapper .left-form .help-and-support > div .support-number .icon .iconify, .login-form-wrapper .left-form .help-and-support > div .support-email .icon .iconify {
+  color: #3AA0FF;
+  width: 80%;
+}
+.login-form-wrapper .left-form .help-and-support > div .support-number p, .login-form-wrapper .left-form .help-and-support > div .support-email p {
+  margin-bottom: 0;
+}
+.login-form-wrapper .right-graphic {
+  background-color: #F2FAFE;
+  display: grid;
+  place-items: center;
+}
+.login-form-wrapper .right-graphic svg {
+  max-width: 90%;
+  height: auto;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 18.75rem;
+  height: 100vh;
+  background: transparent linear-gradient(180deg, #6FC2F980 0%, #6FC2F9 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .logo {
+  padding: 1.8rem 0;
+  text-align: center;
+}
+.sidebar .logo img {
+  max-width: 9rem;
+}
+.sidebar .menu {
+  flex: 1;
+}
+.sidebar .menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sidebar .menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  color: #676E89;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+}
+.sidebar .menu ul li a.active {
+  color: #3AA0FF;
+  background-color: #3AA0FF22;
+}
+.sidebar .menu ul li a.active p {
+  font-weight: 500;
+}
+.sidebar .menu ul li a.active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0.4rem;
+  height: 70%;
+  background-color: #3AA0FF;
+}
+.sidebar .menu ul li a .iconify {
+  width: 1rem;
+  height: 1rem;
+}
+.sidebar .menu ul li:last-child {
+  margin-top: auto;
+}
+
+.main {
+  margin-left: 18.75rem;
+  min-height: 100vh;
+  padding: 1.25rem;
+  background-color: #F9FBFD;
+  display: flex;
+  flex-direction: column;
+}
+.main .page-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.main .page-info .icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #3AA0FF44;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .page-info .icon .iconify {
+  width: 35%;
+  height: auto;
+}
+.main .page-info .page-name {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+.main .main-content {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.3rem;
+}
+.main .main-content .service-list .service {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EEF2F6;
+  padding: 1rem 0;
+}
+.main .main-content .service-list .service .form-check label {
+  color: #000;
+  font-weight: 500;
+}
+.main .main-content .service-list .service .service-install-btn {
+  margin-left: auto;
+}
+.main .main-content .service-list .service .status-message {
+  display: none;
+}
+
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
