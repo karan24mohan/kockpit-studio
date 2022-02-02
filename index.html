@@ -93,11 +93,11 @@
       <div class="main-content">
         <div class="machine-selection-wrapper">
           <div class="tabs-wrapper mb-3">
-            <div class="tab active">
+            <div class="tab active windows-tab">
               <span class="iconify" data-icon="bi:microsoft"></span>
               <span>Windows</span>
             </div>
-            <div class="tab">
+            <div class="tab linux-tab">
               <span class="iconify" data-icon="cib:linux"></span>
               <span>Linux</span>
             </div>
@@ -136,48 +136,53 @@
               </fieldset>
             </form>
             <hr>
-            <form id="linux-machine-form">
-              <fieldset disabled="disabled">
-                <div class="d-flex py-3 machine-checkbox-wrapper">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="standalone-machine">
-                    <label class="form-check-label" for="standalone-machine">Standalone</label>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="cluster-machine">
-                    <label class="form-check-label" for="cluster-machine">Cluster</label>
-                  </div>
-                </div>
-                <div class="input-grid-wrapper row">
-                  <div class="col-sm-12 mb-3">
-                    <label for="server-ip-lin" class="form-label">Server IP</label>
-                    <input type="password" class="form-control" id="server-ip-win">
-                  </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
-                    <label for="username-lin" class="form-label">Username</label>
-                    <input type="password" class="form-control" id="username-lin">
-                  </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
-                    <label for="password-lin" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password-lin">
-                  </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
-                    <label for="master-lin" class="form-label">Master(s)</label>
-                    <div class="d-flex">
-                      <input type="text" class="form-control" id="master-lin">
-                      <button class="btn btn-primary">Add</button>
+            <div class="linus-machine-wrapper">
+              <form id="linux-machine-form">
+                <fieldset disabled="disabled">
+                  <div class="d-flex py-3 machine-checkbox-wrapper">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="standalone-machine">
+                      <label class="form-check-label" for="standalone-machine">Standalone</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="cluster-machine">
+                      <label class="form-check-label" for="cluster-machine">Cluster</label>
                     </div>
                   </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
-                    <label for="slave-lin" class="form-label">Slave(s)</label>
-                    <div class="d-flex">
-                      <input type="text" class="form-control" id="slave-lin">
-                      <button class="btn btn-primary">Add</button>
+                  <div class="input-grid-wrapper row">
+                    <div class="col-sm-12 mb-3">
+                      <label for="server-ip-lin" class="form-label">Server IP</label>
+                      <input type="password" class="form-control" id="server-ip-win">
+                    </div>
+                    <div class="col-md-6 col-sm-12 mb-3">
+                      <label for="username-lin" class="form-label">Username</label>
+                      <input type="password" class="form-control" id="username-lin">
+                    </div>
+                    <div class="col-md-6 col-sm-12 mb-3">
+                      <label for="password-lin" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password-lin">
+                    </div>
+                    <div class="col-md-6 col-sm-12 mb-3">
+                      <label for="master-lin" class="form-label">Master(s)</label>
+                      <div class="d-flex">
+                        <input type="text" class="form-control" id="master-lin">
+                        <button class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mb-3">
+                      <label for="slave-lin" class="form-label">Slave(s)</label>
+                      <div class="d-flex">
+                        <input type="text" class="form-control" id="slave-lin">
+                        <button class="btn btn-primary">Add</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </fieldset>
-            </form>
+                </fieldset>
+              </form>
+              <div class="linux-machine-table">
+
+              </div>
+            </div>
           </div>
         </div>
         <div class="page-navigation">
@@ -193,4 +198,5 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"
   ></script>
+  <script src="./machine-form.js"></script>
 </html>
