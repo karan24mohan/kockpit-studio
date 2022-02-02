@@ -296,6 +296,9 @@ p {
 .main .main-content .machine-selection-wrapper .forms-wrapper form fieldset .machine-checkbox-wrapper {
   gap: 5rem;
 }
+.main .main-content .machine-selection-wrapper .forms-wrapper .linux-machine-wrapper .linux-machine-table-wrapper table thead {
+  background-color: #EDF2F6 !important;
+}
 .main .main-content.select-datasource input {
   border: 1px solid #EAF0F7;
 }
