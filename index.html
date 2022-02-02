@@ -24,6 +24,12 @@
         <ul>
           <li>
             <a href="index.html" class="active">
+              <span class="iconify" data-icon="ion:hardware-chip"></span>
+              <p>Select Machine</p>
+            </a>
+          </li>
+          <li>
+            <a href="select-services.html">
               <span class="iconify" data-icon="bx:bxs-dashboard"></span>
               <p>Select Services</p>
             </a>
@@ -81,50 +87,97 @@
     </section>
     <section class="main">
       <div class="page-info">
-        <div class="icon"><span class="iconify" data-icon="bx:bxs-dashboard"></span></div>
-        <div class="page-name">Select Services</div>
+        <div class="icon"><span class="iconify" data-icon="ion:hardware-chip"></span></div>
+        <div class="page-name">Select Machine</div>
       </div>
       <div class="main-content">
-        <div class="service-list">
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Python</label>
+        <div class="machine-selection-wrapper">
+          <div class="tabs-wrapper mb-3">
+            <div class="tab active">
+              <span class="iconify" data-icon="bi:microsoft"></span>
+              <span>Windows</span>
             </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
+            <div class="tab">
+              <span class="iconify" data-icon="cib:linux"></span>
+              <span>Linux</span>
+            </div>
           </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck2">
-              <label class="form-check-label" for="exampleCheck2">Spark</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
-          </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck3">
-              <label class="form-check-label" for="exampleCheck3">Java</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
-          </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck4">
-              <label class="form-check-label" for="exampleCheck4">MongoDB</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
-          </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck5">
-              <label class="form-check-label" for="exampleCheck5">MySql</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
+          <div class="forms-wrapper">
+            <form id="windows-machine-form">
+              <fieldset>
+                <div class="d-flex py-3 machine-checkbox-wrapper">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="local-machine">
+                    <label class="form-check-label" for="local-machine">Local</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="cloud-machine">
+                    <label class="form-check-label" for="cloud-machine">Cloud</label>
+                  </div>
+                </div>
+                <div class="input-grid-wrapper row">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="server-name-win" class="form-label">Server Name</label>
+                    <input type="text" class="form-control" id="server-name-win">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="server-ip-win" class="form-label">Server IP</label>
+                    <input type="password" class="form-control" id="server-ip-win">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="username-win" class="form-label">Username</label>
+                    <input type="password" class="form-control" id="username-win">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="password-win" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password-win">
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <hr>
+            <form id="linux-machine-form">
+              <fieldset disabled="disabled">
+                <div class="d-flex py-3 machine-checkbox-wrapper">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="standalone-machine">
+                    <label class="form-check-label" for="standalone-machine">Standalone</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="cluster-machine">
+                    <label class="form-check-label" for="cluster-machine">Cluster</label>
+                  </div>
+                </div>
+                <div class="input-grid-wrapper row">
+                  <div class="col-sm-12 mb-3">
+                    <label for="server-ip-lin" class="form-label">Server IP</label>
+                    <input type="password" class="form-control" id="server-ip-win">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="username-lin" class="form-label">Username</label>
+                    <input type="password" class="form-control" id="username-lin">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="password-lin" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password-lin">
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="master-lin" class="form-label">Master(s)</label>
+                    <div class="d-flex">
+                      <input type="text" class="form-control" id="master-lin">
+                      <button class="btn btn-primary">Add</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="slave-lin" class="form-label">Slave(s)</label>
+                    <div class="d-flex">
+                      <input type="text" class="form-control" id="slave-lin">
+                      <button class="btn btn-primary">Add</button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
         <div class="page-navigation">

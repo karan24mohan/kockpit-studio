@@ -269,6 +269,33 @@ p {
 .main .main-content .page-navigation .btn.cancel-btn {
   border: 1px solid #EAF0F7;
 }
+.main .main-content .machine-selection-wrapper {
+  flex: 1;
+}
+.main .main-content .machine-selection-wrapper .tabs-wrapper {
+  display: flex;
+}
+.main .main-content .machine-selection-wrapper .tabs-wrapper .tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #000;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main .main-content .machine-selection-wrapper .tabs-wrapper .tab.active {
+  border-bottom: 0.4rem solid #3AA0FF;
+  color: #3AA0FF;
+}
+.main .main-content .machine-selection-wrapper .forms-wrapper form fieldset {
+  border: none;
+}
+.main .main-content .machine-selection-wrapper .forms-wrapper form fieldset .machine-checkbox-wrapper {
+  gap: 5rem;
+}
 .main .main-content.select-datasource input {
   border: 1px solid #EAF0F7;
 }
@@ -334,6 +361,35 @@ p {
 }
 .main .main-content.select-data .select-data-wrapper {
   flex: 1;
+}
+.main .main-content.backup-page .backup-options-wrapper {
+  flex: 1;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option {
+  border: 1px solid #EAF0F7;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option .backup-option-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #DFE3E8;
+  padding: 0.5rem 1rem;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option .backup-option-content {
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option .backup-option-content .form-check {
+  border: 1px solid #DFE3E8;
+  padding: 1rem 1rem 1rem 0;
+  border-radius: 0.5rem;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option .backup-option-content .form-check input {
+  margin-left: 0.5rem;
+}
+.main .main-content.backup-page .backup-options-wrapper .backup-option .backup-option-content .form-check label {
+  margin-left: 0.5rem;
 }
 
 @media screen and (max-width: 1600px) {

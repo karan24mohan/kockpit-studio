@@ -24,6 +24,12 @@
         <ul>
           <li>
             <a href="index.html">
+              <span class="iconify" data-icon="ion:hardware-chip"></span>
+              <p>Select Machine</p>
+            </a>
+          </li>
+          <li>
+            <a href="select-services.html">
               <span class="iconify" data-icon="bx:bxs-dashboard"></span>
               <p>Select Services</p>
             </a>
@@ -84,47 +90,38 @@
         <div class="icon"><span class="iconify" data-icon="mdi:database-refresh"></span></div>
         <div class="page-name">Backup</div>
       </div>
-      <div class="main-content">
-        <div class="service-list">
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Python</label>
+      <div class="main-content backup-page">
+        <p class="mb-3">Backup your data automatically or manually with the freedom to choose frequency for backing up the data.</p>
+        <div class="backup-options-wrapper">
+          <div class="backup-option auto-backup">
+            <h3 class="backup-option-heading">Automatic Backup</h3>
+            <div class="backup-option-content d-flex">
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="backup-everyday">
+                <label class="form-check-label" for="backup-everyday">Every Day</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="backup-everyweek">
+                <label class="form-check-label" for="backup-everyweek">Every Week</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="backup-everymonth">
+                <label class="form-check-label" for="backup-everymonth">Every Month</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="backup-everyyear">
+                <label class="form-check-label" for="backup-everyyear">Every Year</label>
+              </div>
             </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
           </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck2">
-              <label class="form-check-label" for="exampleCheck2">Spark</label>
+          <div class="backup-option manual-backup">
+            <h3 class="backup-option-heading">Manual Backup</h3>
+            <div class="backup-option-content d-flex">
+
             </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
           </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck3">
-              <label class="form-check-label" for="exampleCheck3">Java</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
-          </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck4">
-              <label class="form-check-label" for="exampleCheck4">MongoDB</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
-          </div>
-          <div class="service">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck5">
-              <label class="form-check-label" for="exampleCheck5">MySql</label>
-            </div>
-            <button class="btn service-install-btn">Install</button>
-            <div class="status-message">Installing</div>
+          <div class="backup-option backup-frequency">
+            <h3 class="backup-option-heading">Backup Frequency</h3>
           </div>
         </div>
         <div class="page-navigation">
