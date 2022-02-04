@@ -70,12 +70,12 @@
               <p>Scheduler</p>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="finish.html">
               <span class="iconify" data-icon="fluent:clipboard-task-24-filled"></span>
               <p>Finish</p>
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="help.html">
               <span class="iconify" data-icon="ep:help-filled"></span>
@@ -117,14 +117,32 @@
           <div class="backup-option manual-backup">
             <h3 class="backup-option-heading">Manual Backup</h3>
             <div class="backup-option-content d-flex">
-              <div>
-                <input type="text" class="form-control" id="backup-">
-                <select name="" id="backup-day"></select>
+              <div class="d-flex">
+                <input type="text" class="form-control" id="backup-day">
+                <select class="form-select" name="" id="backup-day">
+                  <option value="Day">Day</option>
+                </select>
+              </div>
+              <div class="d-flex">
+                <input type="text" class="form-control" id="backup-time">
+                <select class="form-select" name="" id="backup-day">
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
               </div>
             </div>
           </div>
           <div class="backup-option backup-frequency">
             <h3 class="backup-option-heading">Backup Frequency</h3>
+            <div class="backup-option-content d-flex">
+              <div class="d-flex align-items-center">
+                <input type="text" class="form-control">
+                <p>per</p>
+                <select name="" id="" class="form-select">
+                  <option value="">Day</option>
+                </select>
+              </div> 
+            </div>
           </div>
         </div>
         <div class="page-navigation">
